@@ -2,7 +2,7 @@
 # Script for mining 
 # version 0.1 
 # Author: orvn
-# License GPL
+# License APL2
 
 
 # determine a single url
