@@ -11,11 +11,11 @@ Run it as a shell script: `./sidemine.sh`
 
 ### Roadmap
 
-- [] Better error handling
-- [] Option to deal with multiple matches per page
-- [] Parse through an array of URLs from an input source
-- [] Option to extract attributes
-- [] Reference an external file like a sitemap
-- [] Reference a series of nested sitemaps
-- [] Improve memory use and performance by refactoring without pipes
-- [] Accept content with any character encoding
+- [ ] Better error handling
+- [ ] Option to deal with multiple matches per page
+- [ ] Parse through an array of URLs from an input source
+- [ ] Option to extract attributes
+- [ ] Reference an external file like a sitemap
+- [ ] Reference a series of nested sitemaps
+- [ ] Improve memory use and performance by refactoring without pipes
+- [ ] Accept content with any character encoding
