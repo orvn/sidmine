@@ -1,8 +1,8 @@
 #!/bin/bash
-# Script for mining 
-# version 0.1 
-# Author: orvn
-# License APL2
+# a script for mining 
+# version: 0.1 
+# author: orvn
+# license: Apache License 2
 
 
 # determine a single url
@@ -12,7 +12,7 @@ echo
 echo "Destination URI $uri accepted!"
 echo
 
-status=$(curl -I $uri | awk 'NR==1{print $2}')
+status=$(curl -vsI $uri | awk 'NR==1{print $2}')
 
 # follow redirects to source
 function redirective {
@@ -22,8 +22,8 @@ function redirective {
 		uri=$1
 	fi
 
-	reuri=$(curl -I $uri| grep [lL]ocation | awk '{print $2}')
-	status=$(curl -I $reuri | awk 'NR==1{print $2}')
+	reuri=$(curl -vsI $uri| grep [lL]ocation | awk '{print $2}')
+	status=$(curl -vsI $reuri | awk 'NR==1{print $2}')
 
 	if [ $status != 200 ]; then
 		redirective $reuri
@@ -50,10 +50,8 @@ else
 	read -p 'Extract tag: ' extractor
 	echo "$uri is the url"
 	echo
-	# extraction=$(curl $uri | grep -o $extractor)
-	echo $extractor
-	extraction=$(curl $uri | grep -o "<$extractor>.*</$extractor>")
-	echo $extraction
+	# extraction=$(curl -vs $uri | grep -o $extractor)
+	extraction=$(curl -vs $uri | grep -o "<$extractor>.*</$extractor>")
+	echo $extraction 
+	echo $extraction >> ~/tmp.txt
 fi
-
-
