@@ -55,3 +55,5 @@ else
 	echo $extraction 
 	echo $extraction >> ~/tmp.txt
 fi
+
+## add counts for element and attribute types
