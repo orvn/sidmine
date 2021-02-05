@@ -57,3 +57,4 @@ else
 fi
 
 ## add counts for element and attribute types
+# refactor to use xml parsing instead of regex
